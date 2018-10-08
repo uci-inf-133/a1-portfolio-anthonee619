@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+font-family: 'Roboto', sans-serif;
+color: #1D2964;
+background-color: #F5F5F5;
+background: url('boarder.svg') no-repeat;
+}
+
+.wrapper {
+  width: 80%;
+  margin:auto;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 80%;
+  grid-template-rows: 100vh 100vh 100vh;
+  grid-template-areas: 'home' 'aboutMe' 'projects';
+  justify-content: center;
+
+}
+
+.nav {
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* background-color: red; */
+  position: sticky;
+  top: 0;
+}
+
+#hamburger {
+  height: 3rem;
+  padding: 1rem;
+  justify-content: end;
+  grid-column: 12;
+}
+
+#boarder {
+  position:absolute;
+}
+
+.home {
+  grid-area: home;
+  /* background-color: orange; */
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: min-content;
+  grid-template-areas: 'title' 'description' 'icon';
+  gap: 1rem;
+  align-content: center;
+}
+
+.home h3 {
+  font-size: 2rem;
+}
+
+.home img {
+  padding: 0 .2rem;
+}
+
+.title {
+  grid-area: title;
+  font-size: 6rem;
+
+}
+
+.description {
+  grid-area: description;
+}
+
+.icon {
+  grid-area: icon;
+  /* display:grid;
+  grid-template-columns: 1fr 1fr; */
+}
+
+#github {
+    height:3rem;
+}
+
+#linkedin {
+  height:3rem;
+}
+
+.aboutMe {
+  grid-area: aboutMe;
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-template-areas: 'title' 'content';
+  /* background-color: yellow; */
+  gap: 1rem;
+  /* align-content: center; */
+}
+
+.content {
+  font-size: 2rem;
+}
+
+.projects {
+  grid-area: projects;
+  display: grid;
+  /* background-color: blue; */
+  grid-auto-rows: min-content;
+  grid-template-areas: 'title' 'tiles';
+}
+
+.tiles {
+  grid: tiles;
+  display: grid;
+  grid-template-columns: min-content min-content min-content;
+}
+
+
+.tile {
+  background-color: blue;
+  width: 30vw;
+
+}
+
+
+svg.placeholder {
+  max-width: 100%;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJ3aGl0ZSI+CiAgPHBhdGggZD0iTTAgNCBMMCAyOCBMMzIgMjggTDMyIDQgeiBNNCAyNCBMMTAgMTAgTDE1IDE4IEwxOCAxNCBMMjQgMjR6IE0yNSA3IEE0IDQgMCAwIDEgMjUgMTUgQTQgNCAwIDAgMSAyNSA3Ij48L3BhdGg+Cjwvc3ZnPg==") no-repeat center hsl(0, 0%, 80%);
+  background-size: calc(100%/3);
+}
