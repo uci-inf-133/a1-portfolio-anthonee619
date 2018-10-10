@@ -33,8 +33,37 @@ background: url('boarder.svg') no-repeat;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   /* background-color: red; */
-  position: sticky;
+  position: fixed;
   top: 0;
+}
+
+nav {
+  grid-column: 1 / span 7;
+  background-color: yellow;
+  height: 100vh;
+
+  display: grid;
+  justify-content: center;
+}
+
+nav li {
+  padding: 1em;
+}
+
+span {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  background-color: #bbb;
+
+}
+
+.active {
+  display: none;
+}
+
+.active > * {
+  display: none;
 }
 
 #hamburger {
@@ -42,6 +71,7 @@ background: url('boarder.svg') no-repeat;
   padding: 1rem;
   justify-content: end;
   grid-column: 12;
+  cursor: pointer;
 }
 
 #boarder {

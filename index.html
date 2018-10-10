@@ -19,9 +19,18 @@ EMAIL: Rolandf@uci.edu
 </head>
 <body>
   <div class = "nav">
-    <a href= # id = hamburger>
-      <img src = "hamburger.svg" alt = "menu">
-    </a>
+    <nav class>
+      <span></span>
+      <h3>
+        Hi, Welcome to my portfolio!
+      </h3>
+      <ul>
+        <li><a href = "#">About Me</a></li>
+        <li><a href = "#">Projects</a></li>
+      </ul>
+    </nav>
+    <img src = "hamburger.svg" alt = "menu" id = "hamburger">
+
   </div>
   <div class = "grid-container">
     <div class = "home">
@@ -86,6 +95,16 @@ EMAIL: Rolandf@uci.edu
     </div>
 
   </div>
+
+  <script>
+    var menu = document.querySelector('nav'),
+      menulink = document.querySelector('img');
+
+    menulink.addEventListener('click', function(e) {
+      menu.classList.toggle('active');
+      e.preventDefault();
+    })();
+  </script>
 
 
   <!-- <p>
