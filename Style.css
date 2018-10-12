@@ -13,7 +13,7 @@ background-color: #F5F5F5;
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: repeat(3, minmax(100vh, auto)); /*100vh 100vh 100vh;*/
+  grid-template-rows: repeat(3, minmax(110vh, auto));
   grid-template-areas: 'home' 'aboutMe' 'projects';
   justify-content: center;
 
@@ -95,16 +95,19 @@ nav li a{
   position:absolute;
 }
 
-.home {
-  grid-area: home;
-  /* background-color: orange; */
+.grid-container > * {
   display: grid;
   grid-template-columns: 80%;
   grid-auto-rows: min-content;
+  justify-content: space-evenly;
+
+}
+
+.home {
+  grid-area: home;
   grid-template-areas: 'title' 'description' 'icon';
   gap: 1rem;
   align-content: center;
-  justify-content: space-evenly;
   background: url('top.svg') no-repeat;
 }
 
@@ -150,12 +153,8 @@ nav li a{
 
 .aboutMe {
   grid-area: aboutMe;
-  display: grid;
-  grid-auto-rows: min-content;
   grid-template-areas: 'title' 'content';
-  /* background-color: yellow; */
   gap: 1rem;
-  /* align-content: center; */
 }
 
 .content {
@@ -164,19 +163,19 @@ nav li a{
 
 .projects {
   grid-area: projects;
-  display: grid;
-  /* background-color: blue; */
-  grid-auto-rows: min-content;
   grid-template-areas: 'title' 'tiles';
   gap: 1em;
+  background: url("bottom.svg") no-repeat;
+  background-position: bottom;
+
 }
 
 .tiles {
   grid-area: tiles;
   display: grid;
   grid-template-columns: min-content min-content;
-  gap: 2em;
-  justify-content: space-between;
+  gap: 4em;
+  justify-content: center;
 }
 
 
@@ -184,10 +183,9 @@ nav li a{
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJ3aGl0ZSI+CiAgPHBhdGggZD0iTTAgNCBMMCAyOCBMMzIgMjggTDMyIDQgeiBNNCAyNCBMMTAgMTAgTDE1IDE4IEwxOCAxNCBMMjQgMjR6IE0yNSA3IEE0IDQgMCAwIDEgMjUgMTUgQTQgNCAwIDAgMSAyNSA3Ij48L3BhdGg+Cjwvc3ZnPg==") no-repeat center hsl(0, 0%, 80%);
   border-radius: 25px;
   box-shadow: 4px 4px 20px 0px #b9bcc9;
-  width: 35vw;
-  height: 35vh;
+  width: 20em;
+  height: 20em;
   display:grid;
-  align-content: center;
   justify-content: center;
 
 }
