@@ -20,28 +20,30 @@ EMAIL: Rolandf@uci.edu
 <body>
   <div class = "nav">
     <nav class>
-      <img src = "Roland.jpg" alt= "Roland Fernando">
+      <a href = "#home" id = "homeNav">
+        <img src = "Roland.jpg" alt= "Roland Fernando">
+      </a>
       <h3>
         Hi, Welcome to my portfolio!
       </h3>
       <ul>
-        <li><a href = "#aboutMe">About Me</a></li>
-        <li><a href = "#projects">Projects</a></li>
+        <li><a href = "#aboutMe" id = "aboutMeNav">About Me</a></li>
+        <li><a href = "#projects" id = "projectsNav">Projects</a></li>
       </ul>
     </nav>
     <img src = "hamburger.svg" alt = "menu" id = "hamburger">
 
   </div>
   <div class = "grid-container">
-    <div class = "home">
+    <div class = "home" id = "home">
       <h1 class = "title">
         Roland Fernando
       </h1>
       <h3 class = "description">
-        Student | Front End Developer | Technophile
+        Student | Front End Developer | Computer Enthusiest
       </h3>
       <div class = 'icon'>
-        <a href = # >
+        <a href = https://github.com/anthonee619 >
           <img src='github.svg' alt='github logo' id = 'github'>
         </a>
         <a href = # >
@@ -91,21 +93,13 @@ EMAIL: Rolandf@uci.edu
           </a>
         </div>
       </div>
-
     </div>
-
   </div>
 
-  <script>
-  //
-    var menu = document.querySelector('nav'),
-      menulink = document.getElementById('hamburger');
 
-    menulink.addEventListener('click', function(e) {
-      menu.classList.toggle('active');
-      e.preventDefault();
-    })();
-  </script>
+  <script src = "navigation.js"></script>
+
+
 
 
   <!-- <p>

@@ -7,7 +7,7 @@ body {
 font-family: 'Roboto', sans-serif;
 color: #1D2964;
 background-color: #F5F5F5;
-background: url('boarder.svg') no-repeat;
+background: url('top.svg') no-repeat;
 }
 
 .wrapper {
@@ -43,7 +43,7 @@ nav {
   grid-column: 1 / span 7;
   background-color: #7d7c7c;
 
-  display: grid;
+  display: none;
   grid-template-rows: auto auto 1fr;
   justify-content: center;
 }
@@ -85,11 +85,7 @@ nav li a{
 }
 
 .active {
-  display: none;
-}
-
-.active > * {
-  display: none;
+  display: grid;
 }
 
 #hamburger {
@@ -135,16 +131,24 @@ nav li a{
 
 .icon {
   grid-area: icon;
-  /* display:grid;
-  grid-template-columns: 1fr 1fr; */
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1em;
+  justify-content: start;
+}
+
+.icon a {
+  text-decoration: none;
 }
 
 #github {
     height:3rem;
+    cursor: pointer;
 }
 
 #linkedin {
   height:3rem;
+  cursor: pointer;
 }
 
 .aboutMe {
@@ -174,7 +178,7 @@ nav li a{
   grid-area: tiles;
   display: grid;
   grid-template-columns: min-content min-content;
-  gap: 1em;
+  gap: 2em;
   justify-content: space-between;
 }
 
@@ -193,4 +197,11 @@ nav li a{
 
 .tile h4 {
   font-size: 2em;
+}
+
+#bottom {
+
+  display: absolute;
+  bottom: 0;
+
 }
