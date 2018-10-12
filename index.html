@@ -20,13 +20,13 @@ EMAIL: Rolandf@uci.edu
 <body>
   <div class = "nav">
     <nav class>
-      <span></span>
+      <img src = "Roland.jpg" alt= "Roland Fernando">
       <h3>
         Hi, Welcome to my portfolio!
       </h3>
       <ul>
-        <li><a href = "#">About Me</a></li>
-        <li><a href = "#">Projects</a></li>
+        <li><a href = "#aboutMe">About Me</a></li>
+        <li><a href = "#projects">Projects</a></li>
       </ul>
     </nav>
     <img src = "hamburger.svg" alt = "menu" id = "hamburger">
@@ -49,7 +49,7 @@ EMAIL: Rolandf@uci.edu
         </a>
       </div>
     </div>
-    <div class = "aboutMe">
+    <div class = "aboutMe" id = "aboutMe">
       <h1 class = "title">
         About Me
       </h1>
@@ -57,7 +57,7 @@ EMAIL: Rolandf@uci.edu
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
     </div>
-    <div class = "projects">
+    <div class = "projects" id = "projects">
       <h1 class= "title">
         Projects
       </h1>
@@ -97,8 +97,9 @@ EMAIL: Rolandf@uci.edu
   </div>
 
   <script>
+  //
     var menu = document.querySelector('nav'),
-      menulink = document.querySelector('img');
+      menulink = document.getElementById('hamburger');
 
     menulink.addEventListener('click', function(e) {
       menu.classList.toggle('active');

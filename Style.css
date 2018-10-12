@@ -31,6 +31,8 @@ background: url('boarder.svg') no-repeat;
 .nav {
   grid-area: nav;
   display: grid;
+  height: 100vh;
+  width: 100vw;
   grid-template-columns: repeat(12, 1fr);
   /* background-color: red; */
   position: fixed;
@@ -39,23 +41,47 @@ background: url('boarder.svg') no-repeat;
 
 nav {
   grid-column: 1 / span 7;
-  background-color: yellow;
-  height: 100vh;
+  background-color: #7d7c7c;
 
   display: grid;
+  grid-template-rows: auto auto 1fr;
   justify-content: center;
+}
+
+nav * {
+margin: 1em auto;
+}
+
+nav h3 {
+  font-size: 2em;
+}
+
+nav img {
+  height: 20vh;
+  border-radius: 50%;
+}
+
+nav ul {
+  list-style-type: none;
 }
 
 nav li {
   padding: 1em;
+  background-color: #5f8592;
+  border-radius: 1em;
 }
 
-span {
+nav li a{
+  text-decoration: none;
+  font-size: 2em;
+  padding: 1.5em;
+  color: #1D2964;
+}
+
+#profile {
   width: 10em;
   height: 10em;
   border-radius: 50%;
-  background-color: #bbb;
-
 }
 
 .active {
