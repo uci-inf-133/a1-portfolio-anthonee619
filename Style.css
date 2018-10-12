@@ -7,17 +7,12 @@ body {
 font-family: 'Roboto', sans-serif;
 color: #1D2964;
 background-color: #F5F5F5;
-background: url('top.svg') no-repeat;
 }
 
-.wrapper {
-  width: 80%;
-  margin:auto;
-}
 
 .grid-container {
   display: grid;
-  grid-template-columns: 80%;
+  grid-template-columns: 100%;
   grid-template-rows: repeat(3, minmax(100vh, auto)); /*100vh 100vh 100vh;*/
   grid-template-areas: 'home' 'aboutMe' 'projects';
   justify-content: center;
@@ -104,11 +99,13 @@ nav li a{
   grid-area: home;
   /* background-color: orange; */
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 80%;
   grid-auto-rows: min-content;
   grid-template-areas: 'title' 'description' 'icon';
   gap: 1rem;
   align-content: center;
+  justify-content: space-evenly;
+  background: url('top.svg') no-repeat;
 }
 
 .home h3 {

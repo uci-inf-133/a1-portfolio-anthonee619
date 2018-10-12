@@ -6,5 +6,5 @@
       }
     </style>
   </defs>
-  <path id="bottom" class="cls-1" d="M-3258.051,2689.581l129.414-938.822,1790.586-141.178H-3257Z" transform="translate(-1338.051 2689.581) rotate(180)"/>
+  <path id="boarder" class="cls-1" d="M-3257,2689.581l128.433-938.516L-1337,1609.581H-3257Z" transform="translate(3257 -1609.581)"/>
 </svg>
