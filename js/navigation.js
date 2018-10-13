@@ -7,6 +7,15 @@
   function toggleMenu() {
     menu.classList.toggle('active');
     // e.preventDefault();
+    changeNav();
+  };
+
+  function changeNav() {
+    if (menulink.src.includes('img/cross.svg')) {
+      menulink.src = 'img/hamburger.svg';
+    } else if (menulink.src.includes('img/hamburger.svg')) {
+      menulink.src = 'img/cross.svg';
+    }
   };
 
   menulink.addEventListener('click', toggleMenu);
