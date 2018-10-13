@@ -22,18 +22,21 @@ background-color: #F5F5F5;
 .nav {
   grid-area: nav;
   display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: repeat(12, 1fr);
+  /* background-color: red; */
   position: fixed;
   top: 0;
 }
 
 nav {
+  grid-column: 1 / span 7;
   background-color: #7d7c7c;
 
   display: none;
   grid-template-rows: auto auto 1fr;
   justify-content: center;
-  width: 50vw;
-  height: 100vh;
 }
 
 nav * {
@@ -41,11 +44,11 @@ margin: 1em auto;
 }
 
 nav h3 {
-  font-size: 3vw;
+  font-size: 2em;
 }
 
 nav img {
-  height: 20vw;
+  height: 20vh;
   border-radius: 50%;
 }
 
@@ -57,7 +60,6 @@ nav li {
   padding: 1em;
   background-color: #5f8592;
   border-radius: 1em;
-  box-shadow: 4px 4px 20px 0px #5a5858;
 }
 
 nav li a{
@@ -83,10 +85,6 @@ nav li a{
   justify-content: end;
   grid-column: 12;
   cursor: pointer;
-  position: fixed;
-  top: 0;
-  right:0;
-
 }
 
 #boarder {
@@ -110,7 +108,7 @@ nav li a{
 }
 
 .home h3 {
-  font-size: 3vw;
+  font-size: 2rem;
 }
 
 .home img {
@@ -119,7 +117,7 @@ nav li a{
 
 .title {
   grid-area: title;
-  font-size: 9vw;
+  font-size: 6rem;
 
 }
 
@@ -136,7 +134,15 @@ nav li a{
 }
 
 .icon img {
-  height:5vw;
+  cursor: pointer;
+}
+
+#github {
+    height:3rem;
+}
+
+#linkedin {
+  height:3rem;
 }
 
 .aboutMe {
@@ -152,20 +158,18 @@ nav li a{
 .projects {
   grid-area: projects;
   grid-template-areas: 'title' 'tiles';
-  gap: 3em;
+  gap: 1em;
   background: url("bottom.svg") no-repeat;
-  background-position: bottom right;
+  background-position: bottom;
 
 }
 
 .tiles {
   grid-area: tiles;
   display: grid;
-  grid-template-columns: 75vw;
-  grid-auto-rows: 75vw;
+  grid-template-columns: min-content min-content;
   gap: 4em;
   justify-content: center;
-  margin-bottom: 10vh;
 }
 
 
@@ -177,22 +181,11 @@ nav li a{
   height: 20em;
   display:grid;
   justify-content: center;
-  align-content: center;
+
 }
 
 .tile h4 {
   font-size: 2em;
-  margin: auto;
-}
-
-.tile a {
-  text-decoration: none;
-
-}
-
-.tile p {
-  display: none;
-  color: #000;
 }
 
 #bottom {
@@ -200,23 +193,4 @@ nav li a{
   display: absolute;
   bottom: 0;
 
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-  .tiles {
-    grid-template-columns: 40vw 40vw;
-    grid-auto-rows: 40vw;
-  }
-}
-
-@media only screen  and (min-width : 1224px) {
-  .tiles {
-    grid-template-columns: 25vw 25vw 25vw;
-    grid-auto-rows: 25vw;
-  }
-
-  .tile p {
-    display: block;
-  }
 }
