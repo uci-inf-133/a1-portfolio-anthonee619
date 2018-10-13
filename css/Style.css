@@ -4,19 +4,17 @@
 }
 
 body {
-font-family: 'Roboto', sans-serif;
-color: #1D2964;
-background-color: #F5F5F5;
+  font-family: 'Roboto', sans-serif;
+  color: #1D2964;
+  background-color: #F5F5F5;
 }
-
 
 .grid-container {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: repeat(3, minmax(110vh, auto));
-  grid-template-areas: 'home' 'aboutMe' 'projects';
+  grid-template-areas: 'home''aboutMe''projects';
   justify-content: center;
-
 }
 
 .nav {
@@ -28,7 +26,6 @@ background-color: #F5F5F5;
 
 nav {
   background-color: #7d7c7c;
-
   display: none;
   grid-template-rows: auto auto 1fr;
   justify-content: center;
@@ -37,7 +34,7 @@ nav {
 }
 
 nav * {
-margin: 1em auto;
+  margin: 1em auto;
 }
 
 nav h3 {
@@ -60,7 +57,7 @@ nav li {
   box-shadow: 4px 4px 20px 0px #5a5858;
 }
 
-nav li a{
+nav li a {
   text-decoration: none;
   font-size: 2em;
   padding: 1.5em;
@@ -85,25 +82,23 @@ nav li a{
   cursor: pointer;
   position: fixed;
   top: 0;
-  right:0;
-
+  right: 0;
 }
 
 #boarder {
-  position:absolute;
+  position: absolute;
 }
 
-.grid-container > * {
+.grid-container>* {
   display: grid;
   grid-template-columns: 80%;
   grid-auto-rows: min-content;
   justify-content: space-evenly;
-
 }
 
 .home {
   grid-area: home;
-  grid-template-areas: 'title' 'description' 'icon';
+  grid-template-areas: 'title''description''icon';
   gap: 1rem;
   align-content: center;
   background: url('../img/home.svg') no-repeat;
@@ -120,7 +115,6 @@ nav li a{
 .title {
   grid-area: title;
   font-size: 9vw;
-
 }
 
 .description {
@@ -136,12 +130,12 @@ nav li a{
 }
 
 .icon img {
-  height:5vw;
+  height: 5vw;
 }
 
 .aboutMe {
   grid-area: aboutMe;
-  grid-template-areas: 'title' 'content';
+  grid-template-areas: 'title''content';
   gap: 1rem;
 }
 
@@ -151,11 +145,10 @@ nav li a{
 
 .projects {
   grid-area: projects;
-  grid-template-areas: 'title' 'tiles';
+  grid-template-areas: 'title''tiles';
   gap: 3em;
   background: url("../img/projects.svg") no-repeat;
   background-position: bottom right;
-
 }
 
 .tiles {
@@ -168,12 +161,12 @@ nav li a{
   margin-bottom: 10vh;
 }
 
-
 .tile {
+  /* Got url background from https://codepen.io/p-dg/pen/ezYmYz */
   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiBmaWxsPSJ3aGl0ZSI+CiAgPHBhdGggZD0iTTAgNCBMMCAyOCBMMzIgMjggTDMyIDQgeiBNNCAyNCBMMTAgMTAgTDE1IDE4IEwxOCAxNCBMMjQgMjR6IE0yNSA3IEE0IDQgMCAwIDEgMjUgMTUgQTQgNCAwIDAgMSAyNSA3Ij48L3BhdGg+Cjwvc3ZnPg==") no-repeat center hsl(0, 0%, 80%);
   border-radius: 25px;
   box-shadow: 4px 4px 20px 0px #b9bcc9;
-  display:grid;
+  display: grid;
   justify-content: center;
   align-content: center;
 }
@@ -185,22 +178,19 @@ nav li a{
 
 .tile a {
   text-decoration: none;
-
 }
 
 .tile p {
   display: none;
   color: #000;
   height: 15vw;
-  width:15vw;
+  width: 15vw;
   overflow-y: hidden;
 }
 
 #bottom {
-
   display: absolute;
   bottom: 0;
-
 }
 
 /* iPads (portrait and landscape) ----------- */
@@ -211,7 +201,7 @@ nav li a{
   }
 }
 
-@media only screen  and (min-width : 1025px) {
+@media only screen and (min-width : 1025px) {
   .tiles {
     grid-template-columns: 25vw 25vw 25vw;
     grid-auto-rows: 25vw;
