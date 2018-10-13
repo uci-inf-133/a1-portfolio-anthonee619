@@ -25,7 +25,7 @@ body {
 }
 
 nav {
-  background-color: #7d7c7c;
+  background-color: #3c4368;
   display: none;
   grid-template-rows: auto auto 1fr;
   justify-content: center;
@@ -39,12 +39,12 @@ nav * {
 
 nav h3 {
   font-size: 4vw;
+  color: #f5f5f5;
 }
 
 nav img {
   height: 30vh;
   border-radius: 50%;
-  box-shadow: 4px 4px 20px 0px #5a5858;
 }
 
 nav ul {
@@ -53,7 +53,7 @@ nav ul {
 
 nav li {
   padding: 3vh 4vw;
-  background-color: #5f8592;
+  background-color: #C6C6C6;
   border-radius: 1em;
   box-shadow: 4px 4px 20px 0px #5a5858;
 }
