@@ -106,7 +106,7 @@ nav li a{
   grid-template-areas: 'title' 'description' 'icon';
   gap: 1rem;
   align-content: center;
-  background: url('top.svg') no-repeat;
+  background: url('../img/home.svg') no-repeat;
 }
 
 .home h3 {
@@ -153,7 +153,7 @@ nav li a{
   grid-area: projects;
   grid-template-areas: 'title' 'tiles';
   gap: 3em;
-  background: url("bottom.svg") no-repeat;
+  background: url("../img/projects.svg") no-repeat;
   background-position: bottom right;
 
 }
@@ -193,6 +193,9 @@ nav li a{
 .tile p {
   display: none;
   color: #000;
+  height: 15vw;
+  width:15vw;
+  overflow-y: hidden;
 }
 
 #bottom {
@@ -210,7 +213,7 @@ nav li a{
   }
 }
 
-@media only screen  and (min-width : 1224px) {
+@media only screen  and (min-width : 1025px) {
   .tiles {
     grid-template-columns: 25vw 25vw 25vw;
     grid-auto-rows: 25vw;
