@@ -19,10 +19,6 @@ background-color: #F5F5F5;
 
 }
 
-.grid-container > div {
-  padding: 3em 0;
-}
-
 .nav {
   grid-area: nav;
   display: grid;
@@ -137,18 +133,16 @@ nav li a{
   justify-content: start;
 }
 
-.icon a {
-  text-decoration: none;
+.icon img {
+  cursor: pointer;
 }
 
 #github {
     height:3rem;
-    cursor: pointer;
 }
 
 #linkedin {
   height:3rem;
-  cursor: pointer;
 }
 
 .aboutMe {

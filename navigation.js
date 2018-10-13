@@ -3,7 +3,6 @@
     aboutMe = document.getElementById("aboutMeNav"),
     projects = document.getElementById("projectsNav"),
     home = document.getElementById("homeNav");
-
   function toggleMenu() {
     menu.classList.toggle('active');
     // e.preventDefault();
